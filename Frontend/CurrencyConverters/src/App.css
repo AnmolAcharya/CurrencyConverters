@@ -1,0 +1,283 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  min-height: 100vh;
+  /* background: linear-gradient(to right, #4f46e5, #7c3aed); */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.converter-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.main-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-input {
+  width: 100%;
+  padding: 0.75rem;
+  padding-left: 45px; /* Make room for the flag */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  font-size: 16px;
+  color: #1e293b;
+  outline: none;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%236B7280' d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.currency-flag {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: auto;
+  z-index: 1;
+}
+
+.number-input {
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  font-size: 16px;
+  color: #1e293b;
+  outline: none;
+  appearance: textfield;
+  height: 45px; /* Match select height */
+  box-sizing: border-box; /* Ensure padding doesn't affect total size */
+}
+
+/* Remove spinner arrows in Chrome, Safari, Edge, Opera */
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove the previous amount-group styles */
+.input-group.amount-group {
+  position: relative;
+}
+
+/* Remove the hash symbol */
+.input-group.amount-group::before {
+  display: none;
+}
+
+/* Make all input containers consistent */
+.input-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Ensure consistent sizing */
+.select-input,
+.number-input {
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.button-container {
+  margin: 1.5rem 0;
+}
+
+.convert-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.convert-button:hover {
+  background-color: #4f46e5;
+}
+
+.history-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 1.5rem 0 1rem;
+}
+
+.history-container {
+  height: 400px;
+  padding: 0 4px;
+}
+
+.history-list {
+  padding: 0 4px;
+}
+
+.history-item {
+  color: #374151;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history-entry {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.flag-image {
+  width: 44px;
+  height: 44px;
+}
+
+.conversion-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.conversion-amount {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: black;
+}
+
+.currency-info {
+  color: #6b7280;
+}
+
+.delete-button {
+  color: #6b7280;
+  font-weight: bold;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.empty-history {
+  color: #94a3b8;
+  font-size: 14px;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #fef2f2;
+  color: #ef4444;
+  padding: 0.75rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Currency option with flag */
+.currency-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Add these styles for the select options with flags */
+.select-input option {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 20px 80px;
+  }
+}
